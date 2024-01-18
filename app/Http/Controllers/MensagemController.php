@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\DeleteOldMessages;
 use App\Models\Mensagem;
 use Illuminate\Http\Request;
 
@@ -9,6 +10,7 @@ class MensagemController extends Controller
 {
         public function index()
         {
+            dispatch(new DeleteOldMessages());
             return response()->json(Mensagem::all());
         }
 
