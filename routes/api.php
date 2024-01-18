@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MensagemController;
+use App\Http\Controllers\UserController;
 use App\Models\Mensagem;
 use App\Models\User;
 use Illuminate\Http\Request;
