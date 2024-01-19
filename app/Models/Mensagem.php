@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Contracts\UserInterface;
 
 class Mensagem extends Model
 {
@@ -16,7 +17,7 @@ class Mensagem extends Model
     ];
 
     public function user(){
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(UserInterface::class);
     }
 
 }
